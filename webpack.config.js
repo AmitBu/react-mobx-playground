@@ -15,6 +15,18 @@ var loaders = [
       ],
       "plugins": ['transform-decorators-legacy', 'transform-class-properties']
     }
+  },
+  {
+    // SASS Loader
+    // https://github.com/jtangelder/sass-loader
+    test: /\.scss$/,
+    loader: "style!css!sass?sourceMap"
+  }, {
+    // CSS LOADER
+    // Reference: https://github.com/webpack/css-loader
+    // Allow loading css through js
+    test: /\.css$/,
+    loader: "style!css"
   }
 ];
 
