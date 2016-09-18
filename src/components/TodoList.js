@@ -16,7 +16,7 @@ export default class TodoList extends React.Component {
 	render() {
 		let { filteredTodos, filter, clearComplete, unfinishedTodos} = this.props.store;
 		const items = filteredTodos.map(todo => (
-					<li key={todo.id}><input type="checkbox" value={todo.checked} onChange={todo.toggleCheck.bind(todo)} />
+					<li key={todo.id}><input type="checkbox" value={todo.checked} onChange={todo.toggleCheck} />
 						<span className={todo.checked ? 'strike' : ''}>{todo.name}</span>
 					</li>
 		));

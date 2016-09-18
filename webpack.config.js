@@ -6,14 +6,7 @@ var loaders = [
   {
     "test": /\.js?$/,
     "exclude": /node_modules/,
-    "loader": "babel",
-    "query": {
-      "presets": [
-        "es2015",
-        "react"
-      ],
-      "plugins": ['transform-decorators-legacy', 'transform-class-properties']
-    }
+    "loader": "babel-loader"
   },
   {
     // SASS Loader
@@ -34,7 +27,7 @@ module.exports = {
   entry: path.resolve('src', 'main.js'),
   output: {
     path: path.resolve('build'),
-    filename: '[name].js',
+    filename: '[name].[hash].js',
     publicPath: '/'
   },
   plugins: [

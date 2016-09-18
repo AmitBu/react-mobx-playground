@@ -9,12 +9,12 @@ class TodoItem {
       this.checked = checked;
    }
 
-   toggleCheck() {
+   toggleCheck = () => {
       this.checked = !this.checked;
    }
 }
 
-class TodoStore {
+export class TodoStore {
    @observable todos = [];
    @observable filter = "";
 
@@ -36,4 +36,4 @@ class TodoStore {
    }
 }
 
-export default new TodoStore();
+export default new TodoStore;
