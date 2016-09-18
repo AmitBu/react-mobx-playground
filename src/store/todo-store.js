@@ -4,7 +4,7 @@ class TodoItem {
    @observable checked;
 
    constructor(name, checked = false) {
-      this.id      = name + new Date().now;
+      this.id      = name + Math.random();
       this.name    = name;
       this.checked = checked;
    }

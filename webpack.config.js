@@ -10,8 +10,7 @@ var loaders = [
     "query": {
       "presets": [
         "es2015",
-        "react",
-        "stage-0"
+        "react"
       ],
       "plugins": ['transform-decorators-legacy', 'transform-class-properties']
     }
@@ -40,9 +39,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('src', 'index.tpl.html'),
-      inject: 'body',
-      filename: 'index.html'
+      template: path.resolve('src', 'index.html'),
+      inject: 'body'
     })
   ],
   module: {
